@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+    
+  <title>Certificate Generator</title>
+  <link rel="stylesheet" type="text/css" href="style4.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Certificate Generator</h2>
+    <form action="save_certificate.php" method="post">
+    <div class="input-group">
+      <label for="userName">User Name:</label>
+      <input type="text" id="userName" placeholder="Enter user name" name="userName">
+    </div>
+    <div class="input-group">
+      <label for="collegeName">College Name:</label>
+      <input type="text" id="collegeName" placeholder="Enter college name" name="collegeName">
+    </div>
+    <div class="input-group">
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate" name="startDate">
+    </div>
+    <div class="input-group">
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate" name="endDate">
+    </div>
+    <div class="input-group">
+      <label for="certificateId">Certificate ID:</label>
+      <input type="text" id="certificateId" placeholder="Enter certificate ID" name="certificateId">
+    </div>
+    <button class="button1" type="submit">Save</button>
+    <button class="button2" type="submit" onclick="generateCertificate()">Generate Certificate</button>
+  </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="certificate3.js"></script>
+
+  
+
+</body>
+</html>
